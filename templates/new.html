@@ -1,0 +1,105 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--	<title></title>-->
+<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+<!--	&lt;!&ndash; Optional theme &ndash;&gt;-->
+<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+<!--	&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+<!--	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--	<div class="container">-->
+<!--		{% if s %}-->
+<!--			<div class="alert alert-success">-->
+<!--				<h2>{{s}}</h2>-->
+<!--			</div>-->
+<!--		{% endif %}-->
+
+<!--		{% if us %}-->
+<!--			<div class="alert alert-danger">-->
+<!--				<h2>{{us}}</h2>-->
+<!--			</div>-->
+<!--		{% endif %}-->
+
+<!--      <form action="/" method="post">-->
+<!--        <h2>Please sign in</h2>-->
+<!--        <label for="inputEmail">Email address</label>-->
+<!--        <input type="email" id="inputEmail" name="name"  placeholder="Email address" required autofocus>-->
+<!--        <label for="inputPassword">Password</label>-->
+<!--        <input type="password" id="inputPassword" name="pass"  placeholder="Password" required>-->
+<!--        <div class="checkbox">-->
+<!--          <label>-->
+<!--            <input type="checkbox" value="remember-me"> Remember me-->
+<!--          </label>-->
+<!--        </div>-->
+<!--        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>-->
+<!--      </form>-->
+
+<!--    </div>-->
+<!--    <footer></footer> -->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ISL- Sign In &amp; Sign Up </title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'><link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+
+</head>
+<body>
+
+<div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form>
+          <h1>Sign Up</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social"><i class="fab fa-google"></i></a>
+            <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
+          </div>
+          <span>or use your email for registration</span>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button onclick="return false;">Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="/" method="post">
+          <h1>Sign In</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social"><i class="fab fa-google"></i></a>
+            <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
+          </div>
+          <span>or use your account</span>
+          <input type="email" placeholder="Email" name="name" value="flash.kadam123@gmail.com" />
+          <input type="password" placeholder="Password" name="pass" value="123456789"/>
+          <a href="#">Forgot your password?</a>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>Please login with your personal info</p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start your journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- partial -->
+  <script  src="{{url_for('static', filename='script.js')}}"></script>
+
+</body>
+</html>
